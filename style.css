@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    width: 30rem;
+    height: 30rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: url(1200px-Ios_clock.svg.png) center;
+    background-repeat: no-repeat;
+    background-size: 88%;
+    position: relative;
+    background-color: #aaa;
+
+}
+
+.seconds{
+    width: 0.1rem;
+    height: 12rem;
+    background-color: brown;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 25% 0;
+}
+.seconds::after{
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    content: '';
+    background-color: #01162b;
+}
+.minutes{
+    width: 0.3rem;
+    height: 9rem;
+    background-color: #000;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 25% 0;
+}
+.minutes::after{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 108%;
+    left: 50%;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    transform: rotate(45deg);
+    content: '';
+    background-color: #aaa;
+    border-right: 1px solid #01162b;
+    border-bottom: 1px solid #01162b;
+}
+.hours{
+    position: absolute;
+    width: 0.5rem;
+    height: 6rem;
+    border-radius: 10px;
+    background-color: black;
+    top: 49.8%;
+    left: 49.8%;
+    transform: translateX(-50%);
+    transform-origin: 25% 0;
+}
+.hours::after{
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 111%;
+    left: 50%;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    transform: rotate(45deg);
+    content: '';
+    background-color: #aaa;
+    border-right: 1px solid #01162b;
+    border-bottom: 1px solid #01162b;
+}
+
+.dot{
+    position: absolute;
+    width: 0.8em;
+    height: 0.8rem;
+    border-radius: 50px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
